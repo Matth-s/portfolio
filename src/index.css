@@ -46,6 +46,13 @@ html,
   width: 100%;
 }
 
+#root {
+  background-image: url("/assets/background.jpg");
+  background-size: cover;
+  aspect-ratio: auto;
+  background-repeat: no-repeat;
+}
+
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);

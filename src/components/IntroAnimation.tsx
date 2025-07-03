@@ -6,7 +6,7 @@ type IntroAnimationProps = {
 
 const IntroAnimation = ({ setShowAnimation }: IntroAnimationProps) => {
   return (
-    <div className="flex h-full w-full flex-col items-center justify-center gap-y-3 bg-gradient-to-r from-green-400 to-blue-500">
+    <div className="flex h-full w-full flex-col items-center justify-center gap-y-3">
       <motion.p
         className="text-6xl font-bold text-white"
         initial={{ opacity: 0, y: 50 }}
