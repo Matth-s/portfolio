@@ -11,7 +11,7 @@ const IntroAnimation = ({ setShowAnimation }: IntroAnimationProps) => {
         className="text-6xl font-bold text-white"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 0.2 }}
+        transition={{ duration: 1, delay: 0.7 }}
       >
         Senosiain
       </motion.p>
@@ -20,7 +20,7 @@ const IntroAnimation = ({ setShowAnimation }: IntroAnimationProps) => {
         className="text-6xl font-bold text-white"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 0.8 }}
+        transition={{ duration: 1, delay: 1.3 }}
       >
         Matthieu
       </motion.p>
@@ -29,7 +29,7 @@ const IntroAnimation = ({ setShowAnimation }: IntroAnimationProps) => {
         className="my-2 text-2xl font-bold text-white"
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8, delay: 1.6 }}
+        transition={{ duration: 0.8, delay: 2.1 }}
       >
         Développeur web
       </motion.p>
@@ -42,7 +42,7 @@ const IntroAnimation = ({ setShowAnimation }: IntroAnimationProps) => {
           x: 0,
           transition: {
             duration: 0.6,
-            delay: 1.6,
+            delay: 2.1,
           },
         }}
         onClick={setShowAnimation}
