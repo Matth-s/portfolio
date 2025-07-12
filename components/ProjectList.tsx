@@ -8,7 +8,7 @@ const ProjectList = () => {
       <h2 className="text-center font-bold text-4xl mb-12">
         Projets
       </h2>
-      <div className="flex justify-between w-3/5 mx-auto gap-x-4">
+      <div className="flex  flex-col justify-between w-4/5 mx-auto gap-4 md:3/5 text-center lg:flex-row">
         {projects.map((project, idx) => (
           <ProjectCard
             key={project.title}

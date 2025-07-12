@@ -33,7 +33,10 @@ const SkillCard = ({ skill, delay }: SkillCardProps) => {
       </p>
       <ul className="flex flex-col gap-y-3">
         {tech.map((item) => (
-          <li key={item.name} className="flex gap-x-2 items-center">
+          <li
+            key={item.name}
+            className="flex gap-x-2 items-center justify-center"
+          >
             <Image
               src={item.logo}
               alt={item.name}

@@ -8,7 +8,7 @@ export const projects: IProject[] = [
     siteUrl: 'https://brilliant-druid-b603d2.netlify.app',
     techs: ['React', 'Javascript', 'Redux'],
     githubUrl: 'https://github.com/Matth-s/audiophile',
-    imageUrl: './public/audiophile.jpg',
+    imageUrl: '/audiophile.png',
     presentation: [],
   },
   {

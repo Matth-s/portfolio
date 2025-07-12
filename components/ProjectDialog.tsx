@@ -40,7 +40,7 @@ const ProjectDialog = ({ project }: ProjectDialogProps) => {
           {imageUrl && (
             <div className="relative w-full h-64 md:h-96">
               <Image
-                src={'/audiophile.png'}
+                src={imageUrl}
                 alt={`Capture d’écran du projet ${title}`}
                 fill
                 className="object-cover"

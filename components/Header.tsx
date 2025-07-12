@@ -4,7 +4,7 @@ import React from 'react';
 const Header = () => {
   return (
     <header className="flex bg-[#141726] border-b-2 h-16">
-      <nav className="my-auto">
+      <nav className="my-auto mx-auto lg:mx-0">
         <ul className="flex gap-x-8 px-8 font-bold">
           <li>
             <Link href={'/'}>Accueil</Link>
