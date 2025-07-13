@@ -45,16 +45,19 @@ const ProjectDialog = ({ project }: ProjectDialogProps) => {
 
           <div className="mx-auto flex w-fit gap-4 pt-4">
             {siteUrl && (
-              <a href={siteUrl} target="_blank" rel="noopener noreferrer">
+              <Link href={siteUrl} target="_blank" rel="noopener noreferrer">
                 <Button variant="default" className="flex items-center gap-2">
                   <ExternalLink className="h-4 w-4" />
                   Voir en ligne
                 </Button>
-              </a>
+              </Link>
             )}
             {githubUrl && (
               <Link href={githubUrl} target="_blank" rel="noopener noreferrer">
-                <Button variant="outline" className="flex items-center gap-2">
+                <Button
+                  variant="outline"
+                  className="text-bg-primary text-primary flex items-center gap-2 hover:cursor-pointer hover:opacity-50"
+                >
                   <Github className="h-4 w-4" />
                   Code source
                 </Button>
