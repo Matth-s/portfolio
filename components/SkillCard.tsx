@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { ISkill } from '@/interface/skill-interface';
-import Image from 'next/image';
-import React from 'react';
-import { motion } from 'motion/react';
+import { ISkill } from "@/interface/skill-interface";
+import Image from "next/image";
+import React from "react";
+import { motion } from "motion/react";
 
 type SkillCardProps = {
   skill: ISkill;
@@ -15,6 +15,7 @@ const SkillCard = ({ skill, delay }: SkillCardProps) => {
 
   return (
     <motion.div
+      className="mx-auto w-fit"
       initial={{
         opacity: 0,
         y: 50,
@@ -28,18 +29,13 @@ const SkillCard = ({ skill, delay }: SkillCardProps) => {
         },
       }}
     >
-      <p className="mb-6 font-semibold text-center text-xl">
-        {title}
-      </p>
+      <p className="mb-6 text-center text-xl font-semibold">{title}</p>
       <ul className="flex flex-col gap-y-3">
         {tech.map((item) => (
-          <li
-            key={item.name}
-            className="flex gap-x-2 items-center justify-center"
-          >
+          <li key={item.name} className="flex gap-x-2">
             <Image
               src={item.logo}
-              alt={item.name}
+              alt={`${item.name} logo`}
               width={28}
               height={28}
             />

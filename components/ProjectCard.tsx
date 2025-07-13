@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { IProject } from '@/interface/project-interface';
-import React from 'react';
+import { IProject } from "@/interface/project-interface";
+import React from "react";
 
-import { motion } from 'motion/react';
+import { motion } from "motion/react";
 import {
   Card,
   CardContent,
@@ -11,8 +11,8 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from './ui/card';
-import ProjectDialog from './ProjectDialog';
+} from "./ui/card";
+import ProjectDialog from "./ProjectDialog";
 
 type ProjectCardProps = {
   project: IProject;
@@ -36,20 +36,18 @@ const ProjectCard = ({ project, delay }: ProjectCardProps) => {
         },
       }}
     >
-      <Card className="w-full rounded-sm h-full">
+      <Card className="h-full w-full rounded-sm">
         <CardHeader>
-          <CardTitle className="text-2xl font-bold text-center text-[var(--text)]">
+          <CardTitle className="text-center text-2xl font-bold text-[var(--text)]">
             {title}
           </CardTitle>
-          <CardDescription className="text-lg">
-            {description}
-          </CardDescription>
+          <CardDescription className="text-lg">{description}</CardDescription>
         </CardHeader>
-        <CardContent className="flex flex-col h-full">
-          <ul className="flex flex-wrap gap-x-2 gap-y-1 mt-auto justify-center lg:justify-normal">
+        <CardContent className="flex h-full flex-col">
+          <ul className="mt-auto flex flex-wrap justify-center gap-x-2 gap-y-1 lg:justify-normal">
             {techs.map((tech) => (
               <li
-                className="px-3.5 py-1 bg-[var(--background-primary)] rounded-sm bg-background-primary text-[var(--text)]"
+                className="bg-background-primary rounded-sm bg-[var(--background-primary)] px-3.5 py-1 text-[var(--text)]"
                 key={tech}
               >
                 {tech}

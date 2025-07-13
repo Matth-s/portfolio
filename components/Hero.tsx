@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
 const Hero = () => {
-  return <div className="w-full h-80">banner</div>;
+  return <div className="h-80 w-full">banner</div>;
 };
 
 export default Hero;
