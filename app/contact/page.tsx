@@ -1,7 +1,12 @@
-import React from 'react';
+import ContactForm from "@/components/ContactForm";
+import React from "react";
 
 const ContactPage = () => {
-  return <div>ContactPage</div>;
+  return (
+    <div className="flex h-full w-full">
+      <ContactForm />
+    </div>
+  );
 };
 
 export default ContactPage;
