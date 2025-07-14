@@ -47,7 +47,7 @@ const ProjectCard = ({ project, delay }: ProjectCardProps) => {
           <ul className="mt-auto flex flex-wrap gap-x-2 gap-y-1">
             {techs.map((tech) => (
               <li
-                className="bg-background-primary rounded-sm bg-[var(--background-primary)] px-3.5 py-1 text-[var(--text)]"
+                className="bg-background-primary rounded-sm bg-[var(--background-primary)] p-1 text-[var(--text)]"
                 key={tech}
               >
                 {tech}

@@ -3,7 +3,7 @@ module.exports = {
   async headers() {
     return [
       {
-        source: "/(.*)", // Toutes les routes
+        source: "/(.*)",
         headers: [
           {
             key: "Content-Security-Policy",
