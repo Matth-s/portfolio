@@ -25,16 +25,20 @@ const ProjectDialog = ({ project }: ProjectDialogProps) => {
       <DialogTrigger asChild>
         <Button className="mt-4 w-full cursor-pointer">Voir le projet</Button>
       </DialogTrigger>
-      <DialogContent className="max-w-6xl min-w-3/5 overflow-hidden">
-        <DialogHeader className="border-border border-b p-6">
-          <DialogTitle className="text-2xl font-bold">{title}</DialogTitle>
+      <DialogContent className="flex h-auto max-h-[90vh] max-w-6xl min-w-4/5 flex-col gap-y-4 overflow-hidden p-0">
+        <DialogHeader className="border-border h-fit border-b p-6">
+          <DialogTitle className="h-fit text-center text-2xl font-bold">
+            {title}
+          </DialogTitle>
         </DialogHeader>
-        <div className="mx-auto w-full space-y-4 p-2">
-          <p>{description}</p>
+        <div className="h-full w-full space-y-4 p-2">
+          <div className="mx-auto w-3/5">
+            <p className="text-center text-lg">{description}</p>
+          </div>
 
           <ProjectCarousel data={presentation} />
 
-          <div className="mx-auto flex w-fit gap-4 pt-4">
+          <div className="mx-auto flex w-fit gap-4 py-3">
             {siteUrl && (
               <Link href={siteUrl} target="_blank" rel="noopener noreferrer">
                 <Button

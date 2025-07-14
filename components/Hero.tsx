@@ -3,45 +3,63 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const splitWords = (text: string) =>
-  text.split(" ").map((word) => word.split(""));
-
 const letterVariant = {
-  hidden: { opacity: 0 },
+  hidden: { opacity: 0, y: 10 },
   visible: (i: number) => ({
     opacity: 1,
-    transition: {
-      delay: i * 0.06,
-    },
+    y: 0,
+    transition: { delay: i * 0.02 },
   }),
 };
 
 const Hero = () => {
-  const fullName = splitWords("Senosiain Matthieu");
+  const intro = "Bonjour, je suis Matthieu Senosiain";
 
-  return (
-    <section className="flex h-80 w-full items-center justify-center px-4 text-center">
-      <div className="flex flex-wrap justify-center text-5xl leading-tight font-semibold">
-        {fullName.map((letters, wordIndex) => (
+  const renderAnimatedText = (text: string) =>
+    text.split(" ").map((word, wordIdx) => (
+      <span key={wordIdx} className="inline-flex">
+        {word.split("").map((char, charIdx) => (
           <motion.span
-            key={`word-${wordIndex}`}
-            className="mr-2 inline-block whitespace-nowrap"
-            initial="hidden"
-            animate="visible"
+            key={`${wordIdx}-${charIdx}`}
+            custom={wordIdx * 10 + charIdx}
+            variants={letterVariant}
+            className="inline-block"
           >
-            {letters.map((char, i) => (
-              <motion.span
-                key={`char-${wordIndex}-${i}`}
-                custom={wordIndex * 10 + i}
-                variants={letterVariant}
-                className="inline-block"
-              >
-                {char}
-              </motion.span>
-            ))}
+            {char}
           </motion.span>
         ))}
-      </div>
+        <span className="inline-block">&nbsp;</span>
+      </span>
+    ));
+
+  return (
+    <section className="flex flex-col items-center justify-center px-4 py-16 text-center">
+      <motion.h1
+        className="text-3xl font-semibold sm:text-4xl md:text-5xl"
+        initial="hidden"
+        animate="visible"
+      >
+        {renderAnimatedText(intro)}
+      </motion.h1>
+
+      <motion.p
+        className="mt-4 max-w-3xl text-base text-[var(--text)] sm:text-lg md:text-xl"
+        initial={{
+          y: 20,
+          opacity: 0,
+        }}
+        animate={{
+          y: 0,
+          opacity: 1,
+          transition: {
+            delay: 0.5,
+            duration: 0.6,
+          },
+        }}
+      >
+        À la recherche d&apos;une alternance en tant que Concepteur Développeur
+        d&apos;Applications (Bac +3 – École CESI)
+      </motion.p>
     </section>
   );
 };

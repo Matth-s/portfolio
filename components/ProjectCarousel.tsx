@@ -18,27 +18,26 @@ type ProjectCarouselProps = {
 const ProjectCarousel = ({ data }: ProjectCarouselProps) => {
   return (
     <Carousel
-      className="w-full overflow-hidden rounded-lg shadow-lg"
+      className="flex h-96 w-full items-center shadow-lg"
       opts={{
         loop: true,
       }}
     >
-      <CarouselContent className="flex">
-        {data.map((item, index) => (
-          <CarouselItem
-            key={index}
-            className="flex w-full items-center justify-center"
-          >
+      <CarouselContent className="p-0">
+        {data.map((item, idx) => (
+          <CarouselItem key={idx} className="h-full max-h-96">
             {item.type === "image" ? (
-              <div className="relative mx-auto aspect-video w-4/5">
+              <div className="mx-auto aspect-video w-full rounded-lg lg:w-4/5">
                 <Image
                   src={item.src}
-                  alt={`Présentation ${index + 1}`}
-                  fill
-                  className="rounded-md object-contain"
-                  priority={index === 0}
+                  alt={`presentation ${idx}`}
+                  width={200}
+                  height={170}
                   quality={100}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
+                  decoding="async"
+                  layout="responsive"
+                  unoptimized={true}
+                  style={{ objectFit: "cover", width: "100%", height: "100%" }}
                 />
               </div>
             ) : (
@@ -53,8 +52,8 @@ const ProjectCarousel = ({ data }: ProjectCarouselProps) => {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="left-0" />
-      <CarouselNext className="right-0" />
+      <CarouselPrevious className="left-0 hidden lg:flex" />
+      <CarouselNext className="right-0 hidden lg:flex" />
     </Carousel>
   );
 };
