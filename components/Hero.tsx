@@ -64,7 +64,21 @@ const Hero = () => {
         d&apos;Applications (Bac +3 – École CESI)
       </motion.p>
 
-      <div className="pt-4">
+      <motion.div
+        className="pt-4"
+        initial={{
+          y: 40,
+          opacity: 0,
+        }}
+        animate={{
+          y: 0,
+          opacity: 1,
+          transition: {
+            delay: 0.5,
+            duration: 1,
+          },
+        }}
+      >
         <Link
           href={"https://www.linkedin.com/in/senosiain-matthieu/"}
           target="_blank"
@@ -80,7 +94,7 @@ const Hero = () => {
             Linkedin
           </Button>
         </Link>
-      </div>
+      </motion.div>
     </section>
   );
 };

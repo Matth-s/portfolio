@@ -32,7 +32,7 @@ const ProjectDialog = ({ project }: ProjectDialogProps) => {
           </DialogTitle>
         </DialogHeader>
         <div className="h-full w-full space-y-4 p-2">
-          <div className="mx-auto w-3/5">
+          <div className="mx-auto w-full lg:w-3/5">
             <p className="text-center text-lg">{description}</p>
           </div>
 
