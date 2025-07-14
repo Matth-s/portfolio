@@ -2,6 +2,9 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { Button } from "./ui/button";
+import Image from "next/image";
 
 const letterVariant = {
   hidden: { opacity: 0, y: 10 },
@@ -60,6 +63,24 @@ const Hero = () => {
         À la recherche d&apos;une alternance en tant que Concepteur Développeur
         d&apos;Applications (Bac +3 – École CESI)
       </motion.p>
+
+      <div className="pt-4">
+        <Link
+          href={"https://www.linkedin.com/in/senosiain-matthieu/"}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button className="bg-[var(--card)]">
+            <Image
+              src={"/icons/linkedin.svg"}
+              alt="logo"
+              width={24}
+              height={24}
+            />
+            Linkedin
+          </Button>
+        </Link>
+      </div>
     </section>
   );
 };
