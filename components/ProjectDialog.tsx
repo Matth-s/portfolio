@@ -31,7 +31,7 @@ const ProjectDialog = ({ project }: ProjectDialogProps) => {
             {title}
           </DialogTitle>
         </DialogHeader>
-        <div className="h-full w-full space-y-4 p-2">
+        <div className="h-full w-full space-y-4 overflow-scroll p-2">
           <div className="mx-auto w-full lg:w-3/5">
             <p className="text-center text-lg">{description}</p>
           </div>
