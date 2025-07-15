@@ -17,9 +17,9 @@ export const projects: IProject[] = [
     ],
   },
   {
-    title: "Front-end mentor forum",
+    title: "Feedback",
     description:
-      "Ce projet est une plateforme de type forum permettant aux utilisateurs de poser des questions, d’y répondre et d’interagir entre eux",
+      "Feedback est un projet fullstack de type forum permettant aux utilisateurs de poser des questions, d’y répondre et d’interagir entre eux",
     siteUrl: "https://boisterous-cupcake-59de67.netlify.app/",
     techs: ["React", "Firebase", "Javascript", "Redux"],
     githubUrl: "https://github.com/Matth-s/front-end-mentor",
@@ -27,15 +27,22 @@ export const projects: IProject[] = [
     presentation: [
       {
         type: "image",
-        src: "./presentation/mentor/",
+        src: "/feedback.png",
       },
     ],
   },
   {
-    title: "Strava",
-    description: "Site",
+    title: "Strava Clone",
+
+    description: `StravaClone est un projet fullstack où j'ai intégré des fonctionnalités payantes de Strava grâce à leur API.
+
+Pour ce projet, j’ai utilisé le framework Next.js, ce qui m’a permis d’avoir un front-end et un back-end dans un même environnement.
+
+Côté back-end, j'ai utilisé Supabase comme base de données, associé à Prisma et TypeScript pour garantir la cohérence des types.
+
+Pour le front-end, j’ai opté pour React.js afin de proposer une interface fluide et facile à utiliser.`,
     siteUrl: null,
-    techs: ["Nextjs", "Supabase", "Prisma", "Tailwind", "NextAuth"],
+    techs: ["Nextjs", "Supabase", "Prisma", "Tailwind", "NextAuth, Typescript"],
     githubUrl: "https://github.com/Matth-s/strava",
     imageUrl: "",
     presentation: [
