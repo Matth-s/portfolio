@@ -18,7 +18,7 @@ type ProjectCarouselProps = {
 const ProjectCarousel = ({ data }: ProjectCarouselProps) => {
   return (
     <Carousel
-      className="flex h-fit w-full items-center shadow-lg lg:h-96"
+      className="my-2 flex h-fit w-full items-center shadow-lg lg:h-96"
       opts={{
         loop: true,
       }}

@@ -12,6 +12,7 @@ import { IProject } from "@/interface/project-interface";
 import { ExternalLink, Github } from "lucide-react";
 import Link from "next/link";
 import ProjectCarousel from "./ProjectCarousel";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 
 type ProjectDialogProps = {
   project: IProject;
@@ -31,7 +32,7 @@ const ProjectDialog = ({ project }: ProjectDialogProps) => {
             {title}
           </DialogTitle>
         </DialogHeader>
-        <div className="h-full w-full space-y-4 overflow-scroll p-2">
+        <ScrollArea className="h-full w-full space-y-4 overflow-y-auto p-2">
           <div className="mx-auto w-full lg:w-3/5">
             <p className="text-center text-lg">{description}</p>
           </div>
@@ -62,7 +63,9 @@ const ProjectDialog = ({ project }: ProjectDialogProps) => {
               </Link>
             )}
           </div>
-        </div>
+
+          <ScrollBar orientation="vertical" />
+        </ScrollArea>
       </DialogContent>
     </Dialog>
   );
