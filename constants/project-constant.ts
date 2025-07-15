@@ -34,13 +34,10 @@ export const projects: IProject[] = [
   {
     title: "Strava Clone",
 
-    description: `StravaClone est un projet fullstack où j'ai intégré des fonctionnalités payantes de Strava grâce à leur API.
-
+    description: `StravaClone est un projet fullstack où j'ai intégré des fonctionnalités premium de Strava grâce à leur API.
 Pour ce projet, j’ai utilisé le framework Next.js, ce qui m’a permis d’avoir un front-end et un back-end dans un même environnement.
-
-Côté back-end, j'ai utilisé Supabase comme base de données, associé à Prisma et TypeScript pour garantir la cohérence des types.
-
-Pour le front-end, j’ai opté pour React.js afin de proposer une interface fluide et facile à utiliser.`,
+Côté back-end, j'ai utilisé Supabase comme base de données, associé à Prisma et TypeScript pour garantir la cohérence des types, et Reactjs pour le front-end afin de proposer une interface fluide.
+`,
     siteUrl: null,
     techs: ["Nextjs", "Supabase", "Prisma", "Tailwind", "NextAuth, Typescript"],
     githubUrl: "https://github.com/Matth-s/strava",
