@@ -73,7 +73,7 @@ const ContactForm = () => {
                   <FormLabel>Email</FormLabel>
                   <FormControl>
                     <Input
-                      className="bg-[var(--border)]"
+                      className="rounded-sm bg-[var(--border)]"
                       placeholder="Votre email"
                       {...field}
                     />
@@ -91,8 +91,12 @@ const ContactForm = () => {
                 <FormItem>
                   <FormLabel>Message</FormLabel>
                   <FormControl>
-                    <ScrollArea className="h-24 overflow-y-scroll bg-[var(--border)]">
-                      <Textarea {...field} placeholder="Votre message" />
+                    <ScrollArea className="border-input bg-background focus-within:ring-ring focus-within:ring-offset-background rounded-sm border shadow-sm focus-within:ring-2 focus-within:ring-offset-2 focus-within:outline-none">
+                      <Textarea
+                        {...field}
+                        placeholder="Votre message"
+                        className="h-24 resize-none border-none bg-transparent outline-none focus:outline-none"
+                      />
                       <ScrollBar orientation="vertical" />
                     </ScrollArea>
                   </FormControl>
