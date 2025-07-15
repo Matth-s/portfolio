@@ -91,13 +91,9 @@ const ContactForm = () => {
                 <FormItem>
                   <FormLabel>Message</FormLabel>
                   <FormControl>
-                    <ScrollArea>
-                      <Textarea
-                        className="h-24 bg-[var(--border)]"
-                        {...field}
-                        placeholder="Votre message"
-                      />
-                      <ScrollBar />
+                    <ScrollArea className="h-24 overflow-y-scroll bg-[var(--border)]">
+                      <Textarea {...field} placeholder="Votre message" />
+                      <ScrollBar orientation="vertical" />
                     </ScrollArea>
                   </FormControl>
                   <FormDescription />
