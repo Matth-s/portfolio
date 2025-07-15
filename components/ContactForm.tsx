@@ -25,6 +25,7 @@ import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Button } from "./ui/button";
 import { sendMessageAction } from "@/actions/send-message-action";
+import { ScrollArea, ScrollBar } from "./ui/scroll-area";
 
 const ContactForm = () => {
   const form = useForm<messageType>({
@@ -90,11 +91,14 @@ const ContactForm = () => {
                 <FormItem>
                   <FormLabel>Message</FormLabel>
                   <FormControl>
-                    <Textarea
-                      className="h-24 bg-[var(--border)]"
-                      {...field}
-                      placeholder="Votre message"
-                    />
+                    <ScrollArea>
+                      <Textarea
+                        className="h-24 bg-[var(--border)]"
+                        {...field}
+                        placeholder="Votre message"
+                      />
+                      <ScrollBar />
+                    </ScrollArea>
                   </FormControl>
                   <FormDescription />
                   <FormMessage />
