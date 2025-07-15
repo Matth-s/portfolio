@@ -39,7 +39,14 @@ Pour ce projet, j’ai utilisé le framework Next.js, ce qui m’a permis d’av
 Côté back-end, j'ai utilisé Supabase comme base de données, associé à Prisma et TypeScript pour garantir la cohérence des types, et Reactjs pour le front-end afin de proposer une interface fluide.
 `,
     siteUrl: null,
-    techs: ["Nextjs", "Supabase", "Prisma", "Tailwind", "NextAuth, Typescript"],
+    techs: [
+      "Nextjs",
+      "Supabase",
+      "Prisma",
+      "Tailwind",
+      "NextAuth",
+      "Typescript",
+    ],
     githubUrl: "https://github.com/Matth-s/strava",
     imageUrl: "",
     presentation: [
