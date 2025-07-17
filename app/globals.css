@@ -51,6 +51,16 @@
   }
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --background-primary: #11131f;
+    --background-secondary: #141726;
+    --card: #182449;
+    --text: #d6e1ff;
+    --border: #304384;
+  }
+}
+
 body {
   background: var(--background-primary);
   color: var(--text);
