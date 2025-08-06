@@ -53,7 +53,7 @@ const ContactForm = () => {
   };
 
   return (
-    <Card className="md:4/5 m-auto w-[95%] rounded-sm sm:w-xl">
+    <Card className="md:4/5 m-auto w-[95%] bg-[#161a29] sm:w-xl">
       <CardHeader>
         <CardTitle className="text-text text-center text-2xl font-bold text-[var(--text)]">
           Contact
@@ -73,7 +73,7 @@ const ContactForm = () => {
                   <FormLabel>Email</FormLabel>
                   <FormControl>
                     <Input
-                      className="rounded-sm bg-[var(--border)]"
+                      className="rounded-sm bg-white!"
                       placeholder="Votre email"
                       {...field}
                     />

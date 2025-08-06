@@ -36,7 +36,7 @@ const ProjectCard = ({ project, delay }: ProjectCardProps) => {
         },
       }}
     >
-      <Card className="h-full w-full">
+      <Card className="h-full w-full bg-[#161a29]">
         <CardHeader>
           <CardTitle className="text-center text-2xl font-bold text-[var(--text)]">
             {title}
